@@ -11,5 +11,6 @@
     ],
     "workspaceFolder": "/usr/src/app",
     "remoteUser": "vscode",
-    "forwardPorts": [4000] // Add port forwarding
+    "forwardPorts": [4000, 35729], 
+    "postStartCommand": "bundle exec jekyll serve --livereload --force_polling --host 0.0.0.0"
 }
