@@ -1,4 +1,62 @@
-{% include base_path %}
+<div style="display: flex; align-items: flex-start; margin-bottom: 2em; gap: 20px;">
+  {% if post.header.teaser %}
+    <img src="{{ post.header.teaser | prepend: '/images/' | prepend: base_path }}" 
+         alt="paper image"
+         style="width: 240px; height: 160px; object-fit: contain; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.25); border: 1px solid #ccc;">
+  {% else %}
+    <div style="width: 180px; height: 120px; background-color: #eee; border-radius: 8px;"></div>
+  {% endif %}
+
+  <div>
+    <!-- 标题 -->
+    <h3 style="margin-top: 0;">
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}" target="_blank" style="font-size: 18px; font-weight: bold;">
+          {{ post.title }}
+        </a>
+      {% else %}
+        {{ post.title }}
+      {% endif %}
+    </h3>
+
+    <!-- 作者 -->
+    {% if post.authors %}
+      <p style="margin: 0; color: #444;">{{ post.authors }}</p>
+    {% endif %}
+
+    <!-- 链接区：Code / Paper / Arxiv -->
+    <p style="margin: 5px 0;">
+      {% if post.codeurl %}
+        <a href="{{ post.codeurl }}" target="_blank">Code</a>
+        <img src="https://img.shields.io/github/stars/{{ post.codeurl | remove: 'https://github.com/' }}?style=social" style="vertical-align: text-bottom;" />
+      {% endif %}
+      {% if post.paperurl %}
+        {% if post.codeurl %} / {% endif %}
+        <a href="{{ post.paperurl }}" target="_blank">Paper</a>
+      {% endif %}
+      {% if post.arxivurl %}
+        / <a href="{{ post.arxivurl }}" target="_blank">Arxiv</a>
+      {% endif %}
+    </p>
+
+    <!-- 发表期刊或会议 -->
+    {% if post.venue %}
+      <p style="margin: 0;"><em>{{ post.venue }}</em></p>
+    {% endif %}
+
+    <!-- 影响因子 -->
+    {% if post.impact_factor %}
+      <p style="margin: 0; color: purple;">Impact factor: <strong>{{ post.impact_factor }}</strong></p>
+    {% endif %}
+
+    <!-- 摘要说明 -->
+    {% if post.excerpt %}
+      <p style="margin-top: 8px;">{{ post.excerpt }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<!-- {% include base_path %}
 
 {% if post.header.teaser %}
   {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
@@ -81,4 +139,4 @@
     {% endif %}
 
   </article>
-</div>
+</div> -->

@@ -9,25 +9,46 @@
 
 main:
   - title: "Publications"
-    url: /publications/
+    url: "#publications"
+    #url: /publications/
 
-  - title: "Talks"
-    url: /talks/    
+  - title: "Research Interest"
+    url: "#research-interest"
 
-  - title: "Teaching"
-    url: /teaching/    
+  - title: "Research Experience"
+    url: "#research-experience"
+
+  - title: "Educations"
+    url: "#education"
+
+  - title: "Professional Experience"
+    url: "#professional-experience"
+
+  - title: "skills"
+    url: "#Skills"
+
+  - title: "Honors and Awards"
+    url: "#honors-and-awards"
+
+
+
+  # - title: "Talks"
+  #   url: /talks/    
+
+  # - title: "Teaching"
+  #   url: /teaching/    
     
-  - title: "Portfolio"
-    url: /portfolio/
+  # - title: "Portfolio"
+  #   url: /portfolio/
         
-  - title: "Blog Posts"
-    url: /year-archive/
+  #- title: "Blog Posts"
+  #  url: /year-archive/
     
-  - title: "CV"
-    url: /cv/
+  # - title: "CV"
+  #   url: /cv/
     
   # - title: "CV"
   #   url: /cv-json/
     
-  - title: "Guide"
-    url: /markdown/
+  # - title: "Guide"
+  #   url: /markdown/
