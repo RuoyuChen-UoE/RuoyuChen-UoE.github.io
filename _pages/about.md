@@ -103,7 +103,7 @@ For more details, please view
 <div id="professional-experience"></div>
 ## 🥼 Professional Experience
 
-- Lecturer (Part-time), AI-Driven Protein Design Course, China (04/2025-Now)
+- Lecturer (Part-time), AI-Driven Protein Design, China (04/2025-Now)
 
 - Drug Inspection (Intern), Comprehensive Business Department and Chemical Office, China (07/2022-09/2022)
 
