@@ -298,6 +298,29 @@ h3 {
   gap: 18px;
 }
 
+.proposal-panel {
+  margin-bottom: 18px;
+}
+
+.proposal-panel article {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--moss);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.proposal-panel p,
+.proposal-panel li {
+  color: var(--soft-ink);
+}
+
+.proposal-panel ul {
+  margin: 18px 0 0;
+  padding-left: 20px;
+}
+
 .project-card,
 .skill-grid article {
   display: flex;
@@ -310,11 +333,7 @@ h3 {
 }
 
 .project-card {
-  min-height: 520px;
-}
-
-.featured-project {
-  grid-column: 1 / -1;
+  min-height: 360px;
 }
 
 .project-visual {
