@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ruoyu Chen | Web CV</title>
+    <title>Ruoyu Chen | CV</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
       body {
@@ -13,18 +13,27 @@
       .cv-page {
         max-width: 980px;
         margin: 0 auto;
-        padding: 72px 22px;
+        padding: 64px 22px;
       }
 
       .cv-page h1 {
+        margin-bottom: 10px;
         color: #17211c;
         font-size: clamp(3rem, 8vw, 5rem);
+      }
+
+      .cv-back {
+        display: inline-flex;
+        margin-bottom: 24px;
+        color: #314f3c;
+        font-weight: 800;
       }
 
       .cv-topline {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px 18px;
+        gap: 8px 18px;
+        margin-bottom: 34px;
         color: #42504a;
       }
 
@@ -34,8 +43,8 @@
       }
 
       .cv-section h2 {
-        margin-bottom: 16px;
-        font-size: clamp(1.7rem, 4vw, 2.4rem);
+        margin-bottom: 18px;
+        font-size: clamp(1.65rem, 4vw, 2.25rem);
       }
 
       .cv-entry {
@@ -46,75 +55,224 @@
         margin-bottom: 0;
       }
 
+      .cv-entry-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 6px;
+      }
+
+      .cv-entry-header h3 {
+        margin-bottom: 0;
+      }
+
+      .cv-date {
+        flex: 0 0 auto;
+        color: #65756e;
+        font-weight: 800;
+      }
+
       .cv-entry p,
-      .cv-entry li {
+      .cv-entry li,
+      .cv-section li {
         color: #42504a;
+      }
+
+      .cv-entry ul,
+      .cv-section ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+      }
+
+      @media (max-width: 620px) {
+        .cv-entry-header {
+          display: block;
+        }
+
+        .cv-date {
+          display: block;
+          margin-top: 4px;
+        }
       }
     </style>
   </head>
   <body>
     <main class="cv-page">
-      <a href="index.html">Back to homepage</a>
-      <h1>Ruoyu Chen</h1>
+      <a class="cv-back" href="index.html">Back to homepage</a>
+      <h1>RUOYU CHEN</h1>
       <div class="cv-topline">
-        <span>ruoyu_@outlook.com</span>
-        <span>Shanghai, China</span>
-        <span>Computational Genetics - Human Disease</span>
+        <span>E-mail: <a href="mailto:ruoyu_@outlook.com">ruoyu_@outlook.com</a></span>
+        <span>Location: Shanghai, China</span>
+        <span>Website: <a href="https://ruoyuchen-uoe.github.io/">https://ruoyuchen-uoe.github.io/</a></span>
       </div>
 
       <section class="cv-section">
         <h2>Education</h2>
         <article class="cv-entry">
-          <h3>University of Edinburgh</h3>
-          <p>MSc Drug Discovery and Translational Biology, School of Biological Sciences, 2023-2024. 2:1 (Merit).</p>
+          <div class="cv-entry-header">
+            <h3>University of Edinburgh, UK</h3>
+            <span class="cv-date">2023-2024</span>
+          </div>
+          <ul>
+            <li>Degree: Master of Science | School of Biological Sciences | 2:1 (Merit)</li>
+            <li>Program: Drug Discovery and Translational Biology</li>
+            <li>Courses: Bioinformatics Programming and System Management, Functional Genomic Technologies, Introduction to web site and database design for drug discovery</li>
+          </ul>
         </article>
         <article class="cv-entry">
-          <h3>Shandong University</h3>
-          <p>BSc Pharmacy, School of Pharmaceutical Sciences, 2018-2022. GPA: 83.37/100.</p>
+          <div class="cv-entry-header">
+            <h3>Shandong University (985 Project), China</h3>
+            <span class="cv-date">2018-2022</span>
+          </div>
+          <ul>
+            <li>Degree: Bachelor of Science | School of Pharmaceutical Sciences | GPA: 83.37/100</li>
+            <li>Program: Pharmacy</li>
+            <li>Courses: Pharmacology, Biochemistry, Molecular Biology, Biochemistry and Molecular Biology Experiment, Physical Chemistry, Medical Microbiology Experiment</li>
+          </ul>
         </article>
       </section>
 
       <section class="cv-section">
         <h2>Research Experience</h2>
         <article class="cv-entry">
-          <h3>Mitochondrial Genetics in Immunity and Neurodegeneration</h3>
-          <p>Proposed PhD direction. Interested in mtDNA variation, mtDNA copy number, antiviral immunity, inflammation, neurodegenerative disease risk, and cohort-scale genetic analysis.</p>
+          <div class="cv-entry-header">
+            <h3>Transcriptomic Analysis of Pediatric Hepatoblastoma</h3>
+            <span class="cv-date">06/2026-Present</span>
+          </div>
+          <p><em>Research Assistant | Shanghai Jiao Tong University | R, Python, Linux</em></p>
+          <ul>
+            <li>Performed bulk RNA-seq and single-cell RNA-seq analysis of pediatric hepatoblastoma datasets.</li>
+            <li>Conducted differential expression analysis, GSEA, and cell-type annotation.</li>
+            <li>Curated public GEO multi-cohort datasets and harmonized sample metadata for downstream analysis.</li>
+          </ul>
         </article>
         <article class="cv-entry">
-          <h3>Transcriptomic Analysis of Pediatric Hepatoblastoma</h3>
-          <p>Research Assistant, Shanghai Jiao Tong University, 06/2026-Present. Bulk RNA-seq, scRNA-seq, differential expression analysis, GSEA, cell-type annotation, and multi-cohort GEO data curation.</p>
+          <div class="cv-entry-header">
+            <h3>Computational Prediction of Optimal Protein Tagging Sites</h3>
+            <span class="cv-date">03/2024-11/2024</span>
+          </div>
+          <p><em>Graduate Dissertation | University of Edinburgh | R, Python</em></p>
+          <ul>
+            <li>Analyzed large-scale mutational datasets to evaluate computationally predicted protein tagging preferences.</li>
+            <li>Benchmarked prediction performance using correlation analysis and ROC/PR evaluation.</li>
+            <li>Investigated relationships between tagging preference, sequence length, intrinsic disorder, and functional enrichment, including enrichment of GTPase-related proteins.</li>
+          </ul>
         </article>
         <article class="cv-entry">
-          <h3>Computational Prediction of Optimal Protein Tagging Sites</h3>
-          <p>MSc dissertation project, University of Edinburgh, 03/2024-11/2024. Prediction benchmarking, correlation analysis, ROC/PR evaluation, enrichment analysis, and sequence-property analysis.</p>
+          <div class="cv-entry-header">
+            <h3>High-Throughput Data Analysis and Pipeline Development</h3>
+            <span class="cv-date">09/2023-03/2024</span>
+          </div>
+          <p><em>Graduate Coursework | University of Edinburgh | R, Python, Linux</em></p>
+          <ul>
+            <li>Built a Linux-based microarray gene-expression pipeline for MEF2C perturbation analysis.</li>
+            <li>Automated NCBI sequence retrieval, sequence alignment, and motif scanning.</li>
+            <li>Designed a SQL molecular database with a PHP/HTML web interface.</li>
+          </ul>
         </article>
         <article class="cv-entry">
-          <h3>High-Throughput Data Analysis and Pipeline Development</h3>
-          <p>MSc coursework project, University of Edinburgh, 09/2023-03/2024. Microarray gene-expression pipeline, NCBI sequence retrieval, alignment, motif scanning, and SQL database development.</p>
+          <div class="cv-entry-header">
+            <h3>Structural Bioinformatics and Virtual Screening of Parasite Kinases</h3>
+            <span class="cv-date">09/2023-10/2023</span>
+          </div>
+          <p><em>Coursework Project | PyMOL, AlphaFold, SWISS-MODEL</em></p>
+          <ul>
+            <li>Constructed 3D models of parasite protein kinases using AlphaFold and SWISS-MODEL.</li>
+            <li>Compared predicted structures and assessed ATP-binding pocket features.</li>
+            <li>Explored docking interactions and structural interpretation using PyMOL.</li>
+          </ul>
         </article>
         <article class="cv-entry">
-          <h3>Screening of Protein Phosphatase PPM1B Inhibitors</h3>
-          <p>Undergraduate dissertation project, Shandong University, 03/2021-06/2022. PCR, protein purification, inhibitor screening, and lead compound identification.</p>
+          <div class="cv-entry-header">
+            <h3>Screening of Protein Phosphatase PPM1B Inhibitors</h3>
+            <span class="cv-date">03/2021-06/2022</span>
+          </div>
+          <p><em>Undergraduate Dissertation | PCR, protein purification, inhibitor screening</em></p>
+          <ul>
+            <li>Constructed mutant plasmids and established protein expression and purification workflows.</li>
+            <li>Screened a small-molecule library and identified 39 potential inhibitors.</li>
+            <li>Identified h3-41f1 as a lead compound with IC50 = 0.38 &micro;M.</li>
+          </ul>
         </article>
       </section>
 
       <section class="cv-section">
         <h2>Publications</h2>
         <article class="cv-entry">
-          <p>Li, Z., Chen, R., et al. A comprehensive overview of PPM1B: From biological functions to diseases. European Journal of Pharmacology, 2023.</p>
+          <p>Li, Z., Chen, R., et al. (2023). A comprehensive overview of PPM1B: From biological functions to diseases. <em>European Journal of Pharmacology</em>, 947, 175633. Co-first author.</p>
         </article>
         <article class="cv-entry">
-          <p>Chen, R., Gerasimavicius, L. Exploration of the computationally predicted internal tagging preferred protein properties. Edinburgh Student Journal of Science, 2024.</p>
+          <p>Chen, R., Gerasimavicius, L. (2024). Exploration of the computationally predicted internal tagging preferred protein properties. <em>Edinburgh Student Journal of Science</em>, 1(2), 30-34. Downloaded more than 300 times in 2025.</p>
         </article>
       </section>
 
       <section class="cv-section">
-        <h2>Selected Skills</h2>
+        <h2>Teaching Experience</h2>
+        <article class="cv-entry">
+          <div class="cv-entry-header">
+            <h3>Lecturer in AI-Driven Protein Design</h3>
+            <span class="cv-date">04/2025-08/2025</span>
+          </div>
+          <p><em>Part-time | Yantai Wanwu Network Technology Ltd., China</em></p>
+          <ul>
+            <li>Delivered lectures on machine learning-based protein design, including protein language models and generative frameworks such as RFdiffusion and ProteinMPNN.</li>
+            <li>Provided hands-on PyTorch implementation sessions for students.</li>
+          </ul>
+        </article>
+        <article class="cv-entry">
+          <div class="cv-entry-header">
+            <h3>IELTS Instructor</h3>
+            <span class="cv-date">09/2025-06/2026</span>
+          </div>
+          <p><em>Part-time | Beili International Education, China</em></p>
+          <ul>
+            <li>Delivered IELTS instruction in reading, writing, listening, and speaking to undergraduate students.</li>
+            <li>Developed strong communication skills through structured language teaching.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="cv-section">
+        <h2>Professional Experience</h2>
+        <article class="cv-entry">
+          <div class="cv-entry-header">
+            <h3>Drug Inspection</h3>
+            <span class="cv-date">07/2022-09/2022</span>
+          </div>
+          <p><em>Intern | Yangling Institute for Drug Control, China</em></p>
+          <ul>
+            <li>Assisted in pharmaceutical quality testing of 20+ batches of chemicals and antibiotics.</li>
+            <li>Participated in regulatory documentation and adverse reaction reporting.</li>
+          </ul>
+        </article>
+        <article class="cv-entry">
+          <div class="cv-entry-header">
+            <h3>Clinical Pharmacist</h3>
+            <span class="cv-date">07/2021-08/2021</span>
+          </div>
+          <p><em>Intern | Jinan Central Hospital, China</em></p>
+          <ul>
+            <li>Gained clinical exposure to medication management and common disease treatments.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="cv-section">
+        <h2>Skills</h2>
         <ul>
-          <li>Python, R, SQL, Bash, Linux-based data workflows.</li>
-          <li>Bulk RNA-seq, scRNA-seq, GSEA, public dataset curation, cell-type annotation.</li>
-          <li>GWAS concepts, polygenic scores, cohort-based association analysis, MR planning.</li>
-          <li>Western blot, PCR, protein expression and purification, HPLC.</li>
+          <li><strong>Programming &amp; Data Analysis:</strong> Python, R, SQL, Bash</li>
+          <li><strong>Computational Biology:</strong> bulk RNA-seq &amp; scRNA-seq, protein structure prediction (AlphaFold2/3, ESMfold), protein design (RFdiffusion, ProteinMPNN), molecular visualization (PyMOL)</li>
+          <li><strong>Laboratory Techniques:</strong> Western blot, PCR, protein expression &amp; purification, HPLC</li>
+          <li><strong>Language:</strong> Mandarin (Native), English (IELTS 7.0)</li>
+        </ul>
+      </section>
+
+      <section class="cv-section">
+        <h2>Awards</h2>
+        <ul>
+          <li>Third Class of Academic Scholarship, Shandong University</li>
+          <li>Excellence Award of "Internet +" Innovation &amp; Entrepreneurship Competition, Shandong University</li>
+          <li>First Prize of National College Student Career Development Competition, Shandong University</li>
         </ul>
       </section>
     </main>
